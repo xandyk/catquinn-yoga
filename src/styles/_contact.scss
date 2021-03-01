@@ -1,0 +1,41 @@
+.contact.container {
+    width: 100%;
+    top: 0;
+    background-color: $color-primary;
+    color: $color-white;
+
+    .btn.btn-primary {
+        border: none;
+        background-color: $color-pink;
+        color: $color-white;
+        margin-bottom: 4rem;
+        width: 25%;
+    }
+
+    .form-control {
+        background: $color-secondary;
+        border: none;
+        margin-bottom: 2rem;
+    }
+}
+
+.footer {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+
+    &-icon {
+        height: 1.5rem;
+    }
+
+    &__text {
+        font-size: 1.2rem;
+        margin-bottom: unset;
+    }
+
+    // &__text-madein {
+
+    // }
+}
