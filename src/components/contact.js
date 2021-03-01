@@ -10,7 +10,9 @@ const Contact = () => {
             <Container id="contact" className="contact">
                 <Row>
                     <Col>
-                        <h1 className="text-center">👋 Get In Touch! </h1>
+                        <h1 className="text-center">
+                            <span role="img">👋 </span> Get In Touch!
+                        </h1>
                         <Form>
                             <Form.Group>
                                 <Form.Group>
@@ -41,6 +43,7 @@ const Contact = () => {
                             <a
                                 href="https:www.instagram.com/catquinnyoga/"
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 <img
                                     className="footer-icon"
@@ -52,6 +55,7 @@ const Contact = () => {
                             <a
                                 href="https://www.facebook.com/profile.php?id=100008939167220"
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 <img
                                     className="footer-icon"
@@ -63,7 +67,7 @@ const Contact = () => {
                             <address className="footer__text">
                                 <span> 604. 348. 6438 | Bowen Island, BC</span>{' '}
                                 <br /> ©{new Date().getFullYear()} Built with{' '}
-                                <span role="img">❤️ </span> in Vancouver, BC
+                                <span role="img">❤️ </span> in Vancouver
                             </address>
                         </footer>
                     </Col>

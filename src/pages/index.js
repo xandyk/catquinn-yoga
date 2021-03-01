@@ -1,70 +1,49 @@
-import React from "react"
-import { Row, Col, Container, ListGroup } from "react-bootstrap"
+import React from 'react'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import BackgroundImage from 'gatsby-background-image'
 
-const IndexPage = () => (
-  <Layout pageInfo={{ pageName: "index" }}>
-    <SEO title="Home" keywords={[`gatsby`, `react`, `bootstrap`]} />
-    <Container className="text-center">
-      <Row>
-        <Col>
-          <p>
-            This is a Gatsby Starter that I frequently use to get jump started
-            on quick website builds. It includes the following packages:
-          </p>
-        </Col>
-      </Row>
-      <Row className="justify-content-center my-3">
-        <Col md="6">
-          <ListGroup>
-            <ListGroup.Item
-              action
-              href="https://getbootstrap.com"
-              target="_blank"
+import { graphql } from 'gatsby'
+
+import Layout from '../components/layout'
+import About from '../components/about'
+import Booking from '../components/bookings'
+import Testimonial from '../components/testimonial'
+import Contact from '../components/contact'
+
+// import SEO from '../components/seo'
+
+const IndexPage = props => (
+    <>
+        <Layout pageInfo={{ pageName: 'index' }}>
+            {/* <SEO title="Home" keywords={[`gatsby`, `react`, `bootstrap`]} /> */}
+            <BackgroundImage
+                className="masthead u-margin-bottom-medium"
+                fluid={props.data.indexImage.childImageSharp.fluid}
             >
-              Bootstrap
-            </ListGroup.Item>
-            <ListGroup.Item
-              action
-              href="https://react-bootstrap.github.io/"
-              target="_blank"
-            >
-              react-bootstrap
-            </ListGroup.Item>
-            <ListGroup.Item
-              action
-              href="https://react-icons.netlify.com"
-              target="_blank"
-            >
-              react-icons
-            </ListGroup.Item>
-            <ListGroup.Item
-              action
-              href="https://www.gatsbyjs.org/packages/gatsby-plugin-sass/"
-              target="_blank"
-            >
-              gatsby-plugin-sass
-            </ListGroup.Item>
-          </ListGroup>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <p>
-            This starter also includes a navbar that sticks to the top of the
-            screen when the user scrolls past it, and a footer that stays at the
-            bottom of the screen.
-          </p>
-          <p>
-            For more documentation on these packages and how they work, please
-            refer to the pages linked in the list above.
-          </p>
-        </Col>
-      </Row>
-    </Container>
-  </Layout>
+                <div className="black-overlay">
+                    <div className="content-box">
+                        <h1> Connection Creates Community</h1>
+                    </div>
+                </div>
+            </BackgroundImage>
+            <About />
+            <Booking />
+            <Testimonial />
+            <Contact />
+        </Layout>
+    </>
 )
 
 export default IndexPage
+
+export const pageQuery = graphql`
+    query {
+        indexImage: file(relativePath: { eq: "bush.jpg" }) {
+            childImageSharp {
+                fluid(maxWidth: 1920) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+    }
+`

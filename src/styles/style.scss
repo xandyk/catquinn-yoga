@@ -1,5 +1,30 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "variables";
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'variables';
+@import 'utilities';
 
-@import "layout";
-@import "navbar";
+@import 'layout';
+@import 'background';
+// @import 'navbar';
+@import 'navbar2';
+@import 'about';
+@import 'card';
+@import 'testimonials';
+@import 'contact';
+@import 'footer';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-secondary;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    color: $color-dark-gray;
+}
+
+html {
+    font-size: 62.5%;
+}

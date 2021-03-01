@@ -1,0 +1,24 @@
+.container {
+    position: relative;
+    top: -10rem;
+    // border: 1px solid orange;
+}
+
+.row {
+    .card {
+        margin-bottom: 2rem;
+        min-height: 36rem;
+    }
+
+    .card-img-top {
+        height: 26rem;
+    }
+}
+
+.text-center {
+    margin-bottom: 4rem;
+}
+
+.last.card {
+    margin-bottom: unset;
+}
