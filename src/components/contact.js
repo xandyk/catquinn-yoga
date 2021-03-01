@@ -10,7 +10,7 @@ const Contact = () => {
             <Container id="contact" className="contact">
                 <Row>
                     <Col>
-                        <h1 className="text-center">👋 Keep In Touch! </h1>
+                        <h1 className="text-center">👋 Get In Touch! </h1>
                         <Form>
                             <Form.Group>
                                 <Form.Group>
@@ -26,10 +26,10 @@ const Contact = () => {
                                     required
                                 />
                             </Form.Group>
-                            <Form.Group controlId="exampleForm.ControlTextarea1">
+                            <Form.Group>
                                 <Form.Control
                                     as="textarea"
-                                    rows={3}
+                                    rows={6}
                                     placeholder="Message..."
                                     required
                                 />
