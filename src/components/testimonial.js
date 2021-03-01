@@ -4,12 +4,10 @@ import { Row, Col, Container } from 'react-bootstrap'
 const Testimonial = () => {
     return (
         <>
-            <Container>
+            <Container id="testimonials">
                 <Row>
                     <Col>
-                        <div>
-                            <h1>Testimonial</h1>
-                        </div>
+                        <h1 className="text-center">Testimonials</h1>
                         <p>
                             I love Cat’s classes! After a session with Cat, I
                             feel energized, calm, positive and reflective. She
@@ -26,10 +24,6 @@ const Testimonial = () => {
                         </p>{' '}
                         ​ ​
                     </Col>
-                </Row>
-
-                <Row>
-                    <Col md="6"></Col>
                 </Row>
             </Container>
         </>
